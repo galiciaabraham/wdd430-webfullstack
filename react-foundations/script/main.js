@@ -1,12 +1,20 @@
 const app = document.getElementById('app');
 
-function Header() {
-    return (<h1>This is an H1 element created with a component</h1>)
+function Header(props) {
+    return (<h1>{props.title}</h1>
+    )
 }
 
 function HomePage() {
+    const names = ["John Doe", "Mark Mcnugget", "Josh Syrup"];
+
     return(<div>
-        <Header />
+        <Header title="React" />
+        <ul>
+            {names.map((name) => (
+                <li key={name}>{name}</li>
+            ))}
+        </ul>
     </div>
     );
 }
