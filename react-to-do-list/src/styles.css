@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=SUSE:wght@100..800&display=swap');
+
+body {
+    background-color: #517664 ;
+}
+
+.new-item-form {
+    padding: 1rem;
+}
+
+.form-row {
+   padding: 5px;
+}
+
+.form-row label {
+    color: #D6E5E3;
+    font-family: "SUSE", sans-serif;
+    padding: 1rem;
+    text-align: center;
+    display: block;
+}
+
+.form-row input {
+    height: 2rem;
+    font-family: "SUSE", sans-serif;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4) ;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.button {
+    display: block;
+    background-color: #D6E5E3;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4) ;
+    border-radius: 5px;
+    color: black;
+    font-family: "SU5SE", sans-serif;
+    padding: 1rem;
+    width: 50%;
+    margin: 5px auto;    
+
+}
+
+.button:hover {
+    color: #D6E5E3;
+    background-color: #374b41;
+}
+
+.header {
+    font-family: "Josefin Sans", sans-serif;
+    color: #D6E5E3;
+    margin: 1rem;
+}
+
+.list {
+    color: #D6E5E3;
+    font-family: "SUSE", sans-serif;
+    padding: 1rem;
+    border-radius: 5px;
+    border: #D6E5E3 solid;
+    margin: 1rem;
+}
+
+.list li {
+    list-style: none;
+}
+
+.list li label {
+    padding: 5px;
+}
+
+.button-delete {
+    background-color: #D6E5E3;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4) ;
+    border-radius: 5px;
+    color: black;
+    font-family: "SUSE", sans-serif;
+    padding: .5rem;
+    margin: 5px auto; 
+}
+
+.button-delete:hover {
+    color: #D6E5E3;
+    background-color: #374b41
+}
+
+@media screen and (min-width: 40em) {
+    .form-row label {
+        display: inline;
+    }
+    
+    .form-row input {
+        width: 80%;
+    }
+    
+    .button {
+        width: 30%;    
+    }
+    
+}

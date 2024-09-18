@@ -7,7 +7,7 @@ export function NewTodoForm ({onSubmit}) {
     function handleSubmit(e) {
         e.preventDefault();
         if (newItem  === "") return
-        
+
         onSubmit(newItem)
 
         setNewItem("")
@@ -19,7 +19,9 @@ export function NewTodoForm ({onSubmit}) {
       <label htmlFor="item">New Item</label>
       <input value={newItem} onChange={e => setNewItem(e.target.value)} type="text" id="item"/>
     </div>
+    <div className="button-box">
     <button className="button">Add</button>
+    </div>
   </form>
     )
 };
