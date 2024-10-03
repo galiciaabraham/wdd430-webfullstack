@@ -54,8 +54,8 @@ export async function createInvoice(prevState: State, formData: FormData) {
         VALUES (${customerId}, ${amountInCents}, ${status}, ${date})`;
 
         } catch (error) {
-            message: error
-            console.log('Failed to Create Invoice')
+            console.log(error)
+            console.log('Error creating invoice')
         };
     
         revalidatePath('/dashboard/invoices');
@@ -85,7 +85,7 @@ export async function updateInvoice(id: string, prevState: State,  formData: For
         WHERE id = ${id}
         `;
     } catch (error) {
-        message: error
+        console.log(error)
         console.log('Error updating invoice')
     }
     revalidatePath('/dashboard/invoices');
@@ -96,11 +96,11 @@ export async function updateInvoice(id: string, prevState: State,  formData: For
     try {
     await sql `DELETE FROM invoices WHERE id = ${id}`;
     } catch (error) {
-        message: error;
+        console.log(error)
         console.log('error while deleting invoice')
     }
     revalidatePath('/dashboard/invoices');
-    message: 'Invoice Deleted successfully';
+    console.log('Invoice Deleted successfully');
   }
 
   export async function authenticate(
